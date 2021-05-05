@@ -1,4 +1,4 @@
-package current;
+package concurrent;
 
 public class VolatileInc implements Runnable{
     private static volatile int count = 0 ; //使用 volatile 修饰基本数据内存不能保证原子性

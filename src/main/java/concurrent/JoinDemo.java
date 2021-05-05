@@ -1,4 +1,4 @@
-package current;
+package concurrent;
 
 public class JoinDemo {
     public static void main(String[] args) throws InterruptedException {

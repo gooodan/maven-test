@@ -1,3 +1,5 @@
+package sca;
+
 public class RuntimeConstantPoolOOM {
     public static void main(String[] args) {
 

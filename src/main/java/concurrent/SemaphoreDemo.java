@@ -1,4 +1,4 @@
-package current;
+package concurrent;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;

@@ -1,7 +1,6 @@
-package current;
+package concurrent;
 
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 
 public class CountDownLatchDemo {
 
