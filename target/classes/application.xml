@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byName">
+
+<!--    <bean id="messageService" class="learn.spring.service.impl.MessageServiceImpl" scope="prototype"/>-->
+    <bean id="demoBeanFactoryPostProcessor" class="learn.spring.service.impl.DemoBeanFactoryPostProcessor"/>
+
+<!--  构造器循环依赖 Spring解决不了  -->
+<!--    <bean id="cat" class="learn.spring.service.loop.Cat">-->
+<!--        <constructor-arg name="dog" ref="dog"/>-->
+<!--    </bean>-->
+<!--    <bean id="dog" class="learn.spring.service.loop.Dog">-->
+<!--        <constructor-arg name="cat" ref="cat"/>-->
+<!--    </bean>-->
+
+    <bean id="cat" class="learn.spring.service.loop.Cat">
+        <property name="dog" ref="dog"/>
+    </bean>
+    <bean id="dog" class="learn.spring.service.loop.Dog">
+        <property name="cat" ref="cat"/>
+    </bean>
+
+
+</beans>
