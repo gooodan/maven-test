@@ -5,4 +5,9 @@ public class UserServiceImpl implements IUserService {
     public void add() {
         System.out.println("--------------------add----------------------");
     }
+
+    @Override
+    public void del() {
+        System.out.println("--------------------delete----------------------");
+    }
 }
