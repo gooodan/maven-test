@@ -15,7 +15,7 @@ public class ChatServer {
     public static void main(String[] args) throws Exception {
 
         NioEventLoopGroup bossGroup = new NioEventLoopGroup(1);
-        NioEventLoopGroup workerGroup = new NioEventLoopGroup(1);
+        NioEventLoopGroup workerGroup = new NioEventLoopGroup(2);
 
         ServerBootstrap bootstrap = new ServerBootstrap();
 

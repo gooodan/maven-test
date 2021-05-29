@@ -21,7 +21,7 @@ public class ConsistentHash<T> {
     }
 
     /**
-     * 增加真实机器节点
+     * 增加真实机器的虚拟节点
      *
      * @param node T
      */
@@ -49,7 +49,10 @@ public class ConsistentHash<T> {
 
         // 沿环的顺时针找到一个虚拟节点
         if (!circle.containsKey(hash)) {
+            // tailMap(K fromKey)
+            // Returns a view of the portion of this map whose keys are greater than or equal to fromKey
             SortedMap<Long, T> tailMap = circle.tailMap(hash);
+            // 如果没有比这个hash大的key，那么落在第一个节点上
             hash = tailMap.isEmpty() ? circle.firstKey() : tailMap.firstKey();
         }
         return circle.get(hash);

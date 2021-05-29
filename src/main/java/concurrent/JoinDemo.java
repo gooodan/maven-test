@@ -18,7 +18,7 @@ public class JoinDemo {
         t1.start();
 
         // 主线程让t1执行1秒再执行
-//        t1.join(1000);
+        t1.join(1000);
         // 主线程让t1执行完毕再执行
 //        t1.join();
 
