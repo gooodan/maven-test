@@ -33,5 +33,6 @@ public class MyInvocationHandler implements InvocationHandler {
         MyInvocationHandler handler = new MyInvocationHandler(service);
         IUserService proxy = (IUserService) handler.getProxy();
         proxy.add();
+        proxy.del();
     }
 }
